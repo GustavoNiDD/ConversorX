@@ -27,6 +27,29 @@
             }
         }, 3000);
 
+        function copiarDecimal() {
+        let decimal = document.getElementById("decimal");
+        decimal.select();
+        decimal.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Decimal copiado : " + decimal.value);
+        }
+        function copiarBinario() {
+        let binario = document.getElementById("binario");
+        binario.select();
+        binario.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Binário copiado : " + binario.value);
+        }
+  
+        function copiarHexa() {
+        let hexadecimal = document.getElementById("hexadecimal");
+        hexadecimal.select();
+        hexadecimal.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Hexadecimal copiado : " + hexadecimal.value);
+        }
+        
     </script>
 
     <title>Cyber Table Dungeons</title>
@@ -129,12 +152,16 @@
                 <div>
                     <label for="decimal">Decimal:</label>
                     <input type="text" id="decimal" readonly>
+                    <button onclick="copiarDecimal()">Copiar Decimal</button>
 
                     <label for="binario">Binário:</label>
                     <input type="text" id="binario" readonly>
+                    <button onclick="copiarBinario()">Copiar Binario</button>
 
                     <label for="hexadecimal">Hexadecimal:</label>
                     <input type="text" id="hexadecimal" readonly>
+                    <button onclick="copiarHexa()">Copiar Hexadecimal</button>
+                    
                 </div>
             </div>
             <div>
